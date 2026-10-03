@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abhishek Chavan – QA Engineer, Banking & Financial Services</title>
+<meta name="description" content="QA Engineer testing Internet Banking, Mobile Banking and core banking migration in the BFSI domain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FB; --surface:#FFFFFF; --ink:#0F1E3A; --muted:#55627A; --line:#DFE6F0;
+  --teal:#0FA3A3; --violet:#6D4AFF; --pink:#E8458B; --amber:#F5A524; --green:#1FA35B; --sky:#2F8CFF;
+  --hero1:#0B1E4A; --hero2:#3B1E7A; --hero3:#0E6C78;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --paper:#0B1222; --surface:#121C33; --ink:#E9EEF8; --muted:#A3AFC6; --line:#24314F; }
+}
+:root[data-theme="dark"]{ --paper:#0B1222; --surface:#121C33; --ink:#E9EEF8; --muted:#A3AFC6; --line:#24314F; }
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:1.03rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","Public Sans",system-ui,sans-serif;line-height:1.12;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+img,svg{max-width:100%}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(135deg,var(--hero1) 0%,var(--hero2) 55%,var(--hero3) 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none}
+.b1{width:420px;height:420px;background:var(--pink);top:-120px;right:8%}
+.b2{width:380px;height:380px;background:var(--teal);bottom:-160px;left:-80px}
+.b3{width:260px;height:260px;background:var(--amber);top:40%;right:-80px;opacity:.35}
+.grid-bg{position:absolute;inset:0;opacity:.12;pointer-events:none;
+  background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);
+  background-size:44px 44px;mask-image:radial-gradient(ellipse at 30% 40%,#000 20%,transparent 70%);
+  -webkit-mask-image:radial-gradient(ellipse at 30% 40%,#000 20%,transparent 70%)}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding-top:4.5rem;padding-bottom:5rem}
+.who{display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem}
+.avatar{position:relative;width:72px;height:72px;border-radius:50%;flex:none;
+  background:linear-gradient(135deg,var(--amber),var(--pink));display:grid;place-items:center;
+  font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.5rem;color:#fff;
+  box-shadow:0 0 0 4px rgba(255,255,255,.18)}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover}
+.who p{margin:0;line-height:1.35}
+.who strong{font-size:1.1rem}
+.who span{color:rgba(255,255,255,.75);font-size:.95rem}
+.hero h1{font-size:clamp(2.3rem,5.4vw,3.9rem);font-weight:800;letter-spacing:-0.025em;max-width:15ch}
+.hero h1 .glow{background:linear-gradient(90deg,#7CF0D4,#FFD36E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{margin:1.4rem 0 0;color:rgba(255,255,255,.82);max-width:36rem;font-size:1.08rem}
+.links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.3rem;border-radius:999px;
+  text-decoration:none;font-weight:700;font-size:.97rem;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(90deg,var(--amber),var(--pink));color:#fff;box-shadow:0 8px 24px rgba(232,69,139,.35)}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.06)}
+.btn svg{width:18px;height:18px}
+
+.art{position:relative}
+.art svg{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 50px rgba(0,0,0,.35))}
+
+/* stats strip */
+.stats{position:relative;margin-top:-2.75rem;z-index:2}
+.stats ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.stats li{background:var(--surface);border-radius:18px;padding:1.2rem 1.3rem;border:1px solid var(--line);
+  box-shadow:0 12px 30px rgba(15,30,58,.08);border-top:5px solid var(--c)}
+.stats b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:2rem;font-weight:800;color:var(--c);line-height:1.1}
+.stats span{color:var(--muted);font-size:.92rem}
+
+/* ---------- SECTIONS ---------- */
+section{padding:4.5rem 0 1rem}
+.head{max-width:40rem;margin-bottom:2.25rem}
+.head h2{font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:800;letter-spacing:-.015em}
+.head p{color:var(--muted);margin:.6rem 0 0}
+
+/* timeline */
+.run{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:1.5rem}
+.run::before{content:"";position:absolute;left:27px;top:20px;bottom:20px;width:4px;border-radius:4px;
+  background:linear-gradient(var(--sky),var(--violet),var(--teal),var(--amber))}
+.step{position:relative;padding-left:4.75rem}
+.icon{position:absolute;left:0;top:0;width:58px;height:58px;border-radius:18px;display:grid;place-items:center;color:#fff;
+  background:var(--c);box-shadow:0 10px 22px color-mix(in srgb,var(--c) 45%,transparent)}
+.icon svg{width:28px;height:28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.4rem 1.6rem;
+  border-left:6px solid var(--c)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .75rem;margin-bottom:.4rem}
+.when{font-size:.88rem;color:var(--muted);font-weight:600}
+.status{font-size:.78rem;font-weight:700;padding:.18rem .65rem;border-radius:999px;color:#fff;background:var(--green)}
+.status.wip{background:var(--amber);color:#3A2400}
+.card h3{font-size:1.25rem;font-weight:700;margin-bottom:.55rem}
+.card ul{margin:0;padding-left:1.1rem}
+.card li{margin-bottom:.3rem}
+.card li::marker{color:var(--c)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem}
+.sk{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.25rem 1.35rem;position:relative;overflow:hidden}
+.sk::after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-50px;top:-50px;background:var(--c);opacity:.14}
+.sk h3{font-size:1.02rem;font-weight:700;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem}
+.sk h3 i{width:10px;height:10px;border-radius:50%;background:var(--c);display:inline-block}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tags span{font-size:.86rem;font-weight:600;padding:.3rem .7rem;border-radius:999px;
+  background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--ink);border:1px solid color-mix(in srgb,var(--c) 35%,transparent)}
+
+/* awards */
+.awards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.aw{border-radius:20px;padding:1.4rem;color:#fff;background:linear-gradient(140deg,var(--c1),var(--c2));
+  box-shadow:0 14px 30px rgba(15,30,58,.14)}
+.aw svg{width:34px;height:34px;margin-bottom:.8rem;opacity:.95}
+.aw h3{font-size:1.08rem;font-weight:700;margin-bottom:.3rem}
+.aw p{margin:0;font-size:.92rem;opacity:.88}
+
+/* certs */
+.certs{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.7rem}
+.certs li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:.75rem 1rem;font-weight:600;font-size:.95rem;
+  display:flex;align-items:center;gap:.6rem}
+.certs svg{width:20px;height:20px;color:var(--violet);flex:none}
+.certs small{color:var(--muted);font-weight:500}
+
+/* footer */
+footer{margin-top:5rem;position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(120deg,var(--hero2),var(--hero1) 60%,var(--hero3))}
+footer .wrap{position:relative;padding-top:4rem;padding-bottom:4rem;text-align:center}
+footer h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800}
+footer p{color:rgba(255,255,255,.8);margin:.8rem auto 0;max-width:32rem}
+footer .links{justify-content:center}
+.copy{margin-top:2.5rem;font-size:.85rem;color:rgba(255,255,255,.55)}
+
+@media (max-width:860px){
+  .hero-inner{grid-template-columns:1fr;padding-top:3.5rem;padding-bottom:4.5rem;gap:2.5rem}
+  .art{max-width:30rem}
+  .stats ul{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  .run::before{left:21px}
+  .step{padding-left:0;padding-top:0}
+  .icon{position:relative;width:46px;height:46px;border-radius:14px;margin-bottom:-1.2rem;margin-left:1rem;z-index:1}
+  .icon svg{width:22px;height:22px}
+  .run::before{display:none}
+  .card{padding-top:1.8rem}
+  .stats b{font-size:1.6rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .float{animation:float 6s ease-in-out infinite}
+  .float2{animation:float 7s ease-in-out -2s infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grid-bg"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="who">
+        <div class="avatar">AC<img src="photo.jpg" alt="Abhishek Chavan" onerror="this.remove()"></div>
+        <p><strong>Abhishek Chavan</strong><br><span>QA Engineer · Team Lead · Pune, India</span></p>
+      </div>
+      <h1>I test banking software so it <span class="glow">works on release day.</span></h1>
+      <p class="lede">Two years at Xebia testing a bank’s Internet Banking and Mobile Banking platforms, from building them from scratch to migrating the core banking system. Manual and automation testing, API and database validation, and team lead for current releases.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:abhi.websol7@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email me</a>
+        <a class="btn ghost" href="https://linkedin.com/in/abhishekchavan18" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.86V21H9z"/></svg>LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/heyabhi10" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>GitHub</a>
+      </div>
+    </div>
+
+    <!-- Original illustration: browser + phone banking screens being tested -->
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gA" x1="0" x2="1"><stop offset="0" stop-color="#2F8CFF"/><stop offset="1" stop-color="#6D4AFF"/></linearGradient>
+          <linearGradient id="gB" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0FA3A3"/><stop offset="1" stop-color="#2F8CFF"/></linearGradient>
+          <linearGradient id="gC" x1="0" x2="1"><stop offset="0" stop-color="#F5A524"/><stop offset="1" stop-color="#E8458B"/></linearGradient>
+        </defs>
+        <g class="float">
+          <rect x="10" y="40" width="380" height="270" rx="18" fill="#FFFFFF"/>
+          <rect x="10" y="40" width="380" height="40" rx="18" fill="#EEF2FA"/>
+          <rect x="10" y="62" width="380" height="18" fill="#EEF2FA"/>
+          <circle cx="36" cy="60" r="6" fill="#E8458B"/><circle cx="56" cy="60" r="6" fill="#F5A524"/><circle cx="76" cy="60" r="6" fill="#1FA35B"/>
+          <rect x="110" y="52" width="200" height="16" rx="8" fill="#DCE3F0"/>
+          <rect x="34" y="100" width="190" height="96" rx="14" fill="url(#gA)"/>
+          <rect x="50" y="116" width="70" height="10" rx="5" fill="#fff" opacity=".7"/>
+          <rect x="50" y="138" width="120" height="20" rx="6" fill="#fff"/>
+          <rect x="50" y="170" width="60" height="9" rx="4.5" fill="#fff" opacity=".6"/>
+          <rect x="240" y="100" width="126" height="44" rx="12" fill="#EAF7F0"/>
+          <rect x="254" y="116" width="60" height="10" rx="5" fill="#1FA35B"/>
+          <rect x="240" y="152" width="126" height="44" rx="12" fill="#F0ECFF"/>
+          <rect x="254" y="168" width="80" height="10" rx="5" fill="#6D4AFF"/>
+          <rect x="34" y="214" width="332" height="16" rx="8" fill="#EEF2FA"/>
+          <rect x="34" y="240" width="270" height="16" rx="8" fill="#EEF2FA"/>
+          <rect x="34" y="266" width="300" height="16" rx="8" fill="#EEF2FA"/>
+          <circle cx="352" cy="248" r="13" fill="#1FA35B"/><path d="M345 248l5 5 9-10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <g class="float2">
+          <rect x="330" y="120" width="170" height="290" rx="28" fill="#0F1E3A"/>
+          <rect x="340" y="132" width="150" height="266" rx="20" fill="#FFFFFF"/>
+          <rect x="390" y="140" width="50" height="8" rx="4" fill="#0F1E3A"/>
+          <rect x="352" y="162" width="126" height="70" rx="14" fill="url(#gB)"/>
+          <rect x="364" y="176" width="50" height="8" rx="4" fill="#fff" opacity=".7"/>
+          <rect x="364" y="194" width="80" height="16" rx="5" fill="#fff"/>
+          <g>
+            <rect x="352" y="244" width="58" height="50" rx="12" fill="#FFF3DD"/><circle cx="381" cy="263" r="9" fill="#F5A524"/>
+            <rect x="420" y="244" width="58" height="50" rx="12" fill="#FDE6F0"/><circle cx="449" cy="263" r="9" fill="#E8458B"/>
+          </g>
+          <rect x="352" y="306" width="126" height="14" rx="7" fill="#EEF2FA"/>
+          <rect x="352" y="328" width="100" height="14" rx="7" fill="#EEF2FA"/>
+          <rect x="352" y="356" width="126" height="28" rx="14" fill="url(#gC)"/>
+        </g>
+        <g class="float">
+          <rect x="150" y="330" width="190" height="56" rx="16" fill="#FFFFFF"/>
+          <circle cx="178" cy="358" r="15" fill="#1FA35B"/><path d="M170 358l6 6 10-11" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="202" y="353" font-family="Public Sans, sans-serif" font-size="13" font-weight="700" fill="#0F1E3A">Release signed off</text>
+          <text x="202" y="371" font-family="Public Sans, sans-serif" font-size="11" fill="#55627A">Web, Android and iOS</text>
+        </g>
+        <g class="float2">
+          <rect x="0" y="0" width="150" height="46" rx="14" fill="#FFFFFF"/>
+          <circle cx="24" cy="23" r="11" fill="#6D4AFF"/><path d="M19 23h10M24 18v10" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="44" y="28" font-family="Public Sans, sans-serif" font-size="12.5" font-weight="700" fill="#0F1E3A">API checks: pass</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="wrap stats">
+  <ul>
+    <li style="--c:var(--violet)"><b>30+</b><span>production releases signed off</span></li>
+    <li style="--c:var(--pink)"><b>200+</b><span>gaps caught before a go-live</span></li>
+    <li style="--c:var(--teal)"><b>15+</b><span>banking modules owned end to end</span></li>
+    <li style="--c:var(--green)"><b>0</b><span>post-release client escalations</span></li>
+  </ul>
+</div>
+
+<main class="wrap">
+
+<section aria-labelledby="work">
+  <div class="head">
+    <h2 id="work">Release history</h2>
+    <p>Consultant (Team Lead) at Xebia IT Architects since Sep 2024. One banking and financial services client throughout, in the order the work happened.</p>
+  </div>
+  <ol class="run">
+    <li class="step" style="--c:var(--sky)">
+      <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M8 9l-2 2 2 2M16 9l2 2-2 2"/></svg></span>
+      <div class="card">
+        <div class="meta"><span class="when">Dec 2024 – Mar 2025</span><span class="status">Went live</span></div>
+        <h3>Internet Banking, built from scratch</h3>
+        <ul>
+          <li>Functional owner for 15+ critical modules through build, testing, UAT and go-live, with zero post-release client escalations.</li>
+          <li>Ran 20+ client UAT demos, cutting sign-off turnaround by 10%.</li>
+          <li>Found and fixed data sync issues between the core banking system and downstream databases through SQL validation and log analysis.</li>
+        </ul>
+      </div>
+    </li>
+    <li class="step" style="--c:var(--violet)">
+      <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></span>
+      <div class="card">
+        <div class="meta"><span class="when">Apr 2025 – Aug 2025</span><span class="status">Completed</span></div>
+        <h3>Production support, Internet Banking</h3>
+        <ul>
+          <li>Primary contact for the bank’s operations team; resolved about 60% of tickets independently within SLA.</li>
+          <li>Root cause analysis of production defects with SQL, Postman and OpenSearch, including RBI escalations.</li>
+          <li>Prepared RBI audit test plans, RTMs and evidence packs.</li>
+        </ul>
+      </div>
+    </li>
+    <li class="step" style="--c:var(--teal)">
+      <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="7" ry="2.5"/><path d="M5 5v6c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5"/><path d="M5 11v6c0 1.4 3.1 2.5 7 2.5"/><path d="M16 17h6M19 14l3 3-3 3"/></svg></span>
+      <div class="card">
+        <div class="meta"><span class="when">Aug 2025 – Jan 2026</span><span class="status">Went live</span></div>
+        <h3>Core banking migration (CBS to nCBS), Internet Banking</h3>
+        <ul>
+          <li>Sole functional owner; impact analysis of every journey against new and changed backend APIs to scope regression and integration testing.</li>
+          <li>Caught 200+ functional gaps before go-live across onboarding, login, fund transfers, statements, deposits and cheque services.</li>
+          <li>On-site for final validation, with written client appreciation. Live in January 2026.</li>
+        </ul>
+      </div>
+    </li>
+    <li class="step" style="--c:var(--amber)">
+      <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2M9 8l2 2 4-4"/></svg></span>
+      <div class="card">
+        <div class="meta"><span class="when">Mar 2026 – now</span><span class="status wip">In progress</span></div>
+        <h3>Internet & Mobile Banking, including Mutual Funds · Team Lead</h3>
+        <ul>
+          <li>Leading the team responsible for testing and release quality on web and on the Android and iOS apps, built from scratch.</li>
+          <li>Signed off 30+ production releases covering onboarding, KYC, payments and account servicing, ahead of estimates.</li>
+          <li>Validated mobile apps against Figma designs and backend APIs, improving UAT efficiency by about 12%.</li>
+          <li>Leading the new Mutual Funds module on both platforms: investor onboarding, scheme master, transactions and RTA interfaces, with a traceability framework built from the ground up.</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<section aria-labelledby="skills">
+  <div class="head">
+    <h2 id="skills">Tools and testing</h2>
+    <p>What I work with day to day.</p>
+  </div>
+  <div class="skills">
+    <div class="sk" style="--c:var(--violet)"><h3><i></i>Test automation</h3><div class="tags"><span>Selenium WebDriver</span><span>Playwright</span><span>TestNG</span><span>Maven</span><span>Cucumber BDD</span></div></div>
+    <div class="sk" style="--c:var(--sky)"><h3><i></i>Languages</h3><div class="tags"><span>Java</span><span>TypeScript</span><span>SQL</span></div></div>
+    <div class="sk" style="--c:var(--teal)"><h3><i></i>Manual testing</h3><div class="tags"><span>Functional</span><span>Regression</span><span>Smoke</span><span>Sanity</span><span>System</span><span>Integration</span><span>End-to-end</span><span>UAT</span></div></div>
+    <div class="sk" style="--c:var(--pink)"><h3><i></i>API testing</h3><div class="tags"><span>Postman</span><span>REST Assured</span><span>Playwright API</span></div></div>
+    <div class="sk" style="--c:var(--amber)"><h3><i></i>Database testing</h3><div class="tags"><span>Oracle Database</span><span>Oracle SQL Developer</span></div></div>
+    <div class="sk" style="--c:var(--green)"><h3><i></i>CI/CD and tracking</h3><div class="tags"><span>Jenkins</span><span>Git</span><span>GitHub</span><span>JIRA</span><span>Azure DevOps</span></div></div>
+    <div class="sk" style="--c:var(--violet)"><h3><i></i>Reporting</h3><div class="tags"><span>Allure Reports</span><span>Extent Reports</span></div></div>
+    <div class="sk" style="--c:var(--pink)"><h3><i></i>AI testing tools</h3><div class="tags"><span>Applitools</span><span>Healenium</span><span>Testim</span><span>Functionize</span></div></div>
+    <div class="sk" style="--c:var(--sky)"><h3><i></i>AI-assisted development</h3><div class="tags"><span>Claude Code / Chat / Cowork</span><span>Kiro</span><span>ChatGPT</span><span>GitHub Copilot</span><span>Cursor AI</span></div></div>
+    <div class="sk" style="--c:var(--teal)"><h3><i></i>Banking domain</h3><div class="tags"><span>Internet Banking</span><span>Mobile Banking</span><span>Finacle</span><span>CBS / nCBS</span><span>UPI</span><span>eNACH</span><span>NPCI</span><span>KYC</span><span>Mutual Funds</span></div></div>
+    <div class="sk" style="--c:var(--amber)"><h3><i></i>Ways of working</h3><div class="tags"><span>Agile Scrum</span><span>SDLC</span><span>STLC</span><span>BDD</span></div></div>
+  </div>
+</section>
+
+<section aria-labelledby="awards">
+  <div class="head"><h2 id="awards">Recognition</h2></div>
+  <div class="awards">
+    <div class="aw" style="--c1:#F5A524;--c2:#E8458B">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z"/><path d="M17 5h3v2a3 3 0 01-3 3M7 5H4v2a3 3 0 003 3"/></svg>
+      <h3>Xebia Going the Extra Mile (GEM) Award</h3><p>June 2026</p></div>
+    <div class="aw" style="--c1:#6D4AFF;--c2:#2F8CFF">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8z"/></svg>
+      <h3>Xebia Galaxies “Taurus – Best Project Team”</h3><p>Delivery excellence on a BFSI engagement</p></div>
+    <div class="aw" style="--c1:#0FA3A3;--c2:#1FA35B">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4z"/><path d="M9 10l2 2 4-4"/></svg>
+      <h3>Written client appreciation</h3><p>On-site ownership during the core banking migration</p></div>
+    <div class="aw" style="--c1:#0B1E4A;--c2:#3B1E7A">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/></svg>
+      <h3>Gold Medalist, Rank 1</h3><p>B.E. Computer Engineering, University of Pune, 2022</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="certs">
+  <div class="head"><h2 id="certs">Certifications</h2></div>
+  <ul class="certs">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>X-AI Practitioner Certification</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>AI Fluency: Framework & Foundations <small>Anthropic</small></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>AI Fluency: Capabilities & Limitations <small>Anthropic</small></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>Claude 101 and Claude Code 101 <small>Anthropic</small></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>HackerRank SQL <small>Intermediate, 3-Star</small></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <div class="blob b1" style="top:-200px;right:-100px"></div><div class="blob b2" style="bottom:-220px"></div>
+  <div class="wrap">
+    <h2>Hiring for QA in banking?</h2>
+    <p>I’m happy to share my resume and talk through any of the work above.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:abhi.websol7@gmail.com">abhi.websol7@gmail.com</a>
+      <a class="btn ghost" href="https://linkedin.com/in/abhishekchavan18" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="copy">© 2026 Abhishek Chavan</p>
+  </div>
+</footer>
+
+</body>
+</html>
